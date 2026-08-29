@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menù — La Taverna Di Baffone</title>
+<meta name="description" content="Il menù de La Taverna Di Baffone — cucina napoletana e campana a Giffoni Valle Piana.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;0,6..96,700;1,6..96,400;1,6..96,600&family=Karla:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+
+:root{--fuliggine:#221A15;--fuliggine-2:#2E241D;--calce:#F4EDE1;--calce-2:#EAE0CE;--vino:#7B2D26;--vino-chiaro:#A34237;--rame:#B8813F;--oliva:#6B7248;--inchiostro:#1A1310;--display:'Bodoni Moda',Georgia,serif;--testo:'Karla',system-ui,sans-serif;--curva:cubic-bezier(.22,1,.36,1);--max:1180px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--calce);color:var(--inchiostro);font-family:var(--testo);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,svg{display:block;max-width:100%}a{color:inherit;text-decoration:none}:focus-visible{outline:3px solid var(--rame);outline-offset:4px;border-radius:2px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.08;letter-spacing:-.015em}
+.occhiello{font-family:var(--testo);font-size:.72rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;display:inline-flex;align-items:center;gap:12px}
+.occhiello::before{content:"";width:26px;height:2px;background:currentColor;display:block}
+.intro{padding:92px 0 54px;text-align:center;background:var(--fuliggine);color:var(--calce);position:relative;overflow:hidden}
+.intro:before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 50% 0,rgba(184,129,63,.16),transparent 60%)}
+.intro-inner{position:relative;z-index:1}
+.intro .occhiello{color:var(--rame);justify-content:center;margin-bottom:18px}
+.intro h1{font-size:clamp(2.6rem,6vw,4.8rem);font-weight:400;margin-bottom:18px}
+.intro h1 em{font-style:italic;font-weight:600;color:var(--rame)}
+.intro p{max-width:650px;margin:0 auto;color:rgba(244,237,225,.72);font-size:1.03rem}
+#menu{background:var(--calce-2);padding:88px 0 110px;min-height:100vh}
+.testata{max-width:760px;margin:0 auto 60px;text-align:center}.testata .occhiello{justify-content:center;color:var(--vino);margin-bottom:18px}.testata h2{font-size:clamp(2.1rem,4.6vw,3.3rem);font-weight:400;margin-bottom:18px}.testata h2 em{font-style:italic;font-weight:600;color:var(--vino)}.testata p{color:rgba(26,19,16,.72);font-size:1.05rem;max-width:640px;margin:0 auto}
+.menu-griglia{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:20px 56px}
+.portata{margin-bottom:14px}.portata-nome{font-family:var(--display);font-size:1.55rem;font-weight:400;font-style:italic;color:var(--vino);padding-bottom:12px;margin-bottom:8px;border-bottom:2px solid rgba(123,45,38,.24)}
+.voce{display:flex;align-items:baseline;gap:12px;padding:13px 8px;border-radius:2px;transition:background .3s ease,padding-left .3s var(--curva)}
+.voce:hover{background:rgba(184,129,63,.16);padding-left:16px}.voce-info{flex:1;min-width:0}.voce-nome{font-weight:600;font-size:1rem;display:block}.voce-desc{font-size:.86rem;color:rgba(26,19,16,.56);font-style:italic}.filetto{flex:1;border-bottom:1px dotted rgba(26,19,16,.3);transform:translateY(-4px);min-width:22px}.voce-prezzo{font-family:var(--display);font-weight:600;color:var(--vino);white-space:nowrap}
+.menu-ritorno{margin-top:70px;text-align:center}.menu-ritorno a{display:inline-flex;align-items:center;gap:9px;font-size:.84rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--vino);border-bottom:1.5px solid transparent;padding-bottom:3px;transition:border-color .35s ease,gap .35s var(--curva)}.menu-ritorno a:hover{border-color:var(--vino);gap:16px}
+footer{background:var(--inchiostro);color:rgba(244,237,225,.55);padding:36px 0;text-align:center;font-size:.84rem}footer strong{font-family:var(--display);font-size:1.1rem;color:var(--calce);font-weight:600;display:block;margin-bottom:4px}footer span{color:var(--rame)}
+@media(max-width:980px){.menu-griglia{grid-template-columns:1fr;gap:14px 30px}#menu{padding:72px 0 90px}}
+@media(max-width:520px){body{font-size:16px}.wrap{padding:0 20px}.intro{padding:82px 0 44px}.intro h1{font-size:2.6rem}.testata{margin-bottom:42px}.menu-griglia{gap:10px}.portata-nome{font-size:1.35rem}.voce{gap:9px;padding:11px 5px}.voce:hover{padding-left:10px}.voce-nome{font-size:.96rem}.voce-desc{font-size:.8rem}.voce-prezzo{font-size:.95rem}.filetto{min-width:10px}.menu-ritorno{margin-top:52px}}
+
+/* ---------- Navigazione fissa (Sito in alto a sinistra) ---------- */
+.menu-home {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 200;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    border: 1px solid var(--rame);
+    border-radius: 2px;
+    background: rgba(34,26,21,.94);
+    color: var(--calce);
+    font-family: var(--testo);
+    font-size: .76rem;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    box-shadow: 0 8px 24px rgba(0,0,0,.18);
+    transition: background .3s ease, color .3s ease, transform .3s var(--curva);
+}
+.menu-home:hover {
+    background: var(--rame);
+    color: var(--fuliggine);
+    transform: translateY(-2px);
+}
+
+/* ---------- Bottone tre linee e menu a comparsa (In alto a destra) ---------- */
+.menu-cat-floating {
+    position: fixed;
+    top: 18px;
+    right: 18px;
+    z-index: 200;
+}
+
+.menu-cat-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    border: 1px solid var(--rame);
+    border-radius: 2px;
+    background: rgba(34,26,21,.94);
+    color: var(--calce);
+    font-family: var(--testo);
+    font-size: .76rem;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    box-shadow: 0 8px 24px rgba(0,0,0,.18);
+    cursor: pointer;
+    transition: background .3s ease, color .3s ease, transform .3s var(--curva);
+}
+
+.menu-cat-toggle:hover {
+    background: var(--rame);
+    color: var(--fuliggine);
+    transform: translateY(-2px);
+}
+
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 16px;
+    height: 12px;
+}
+
+.hamburger-icon span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: currentColor;
+    border-radius: 1px;
+}
+
+.menu-cat-dropdown {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    min-width: 190px;
+    background: var(--fuliggine-2);
+    border: 1px solid var(--rame);
+    border-radius: 2px;
+    box-shadow: 0 12px 30px rgba(0,0,0,.4);
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.menu-cat-dropdown.attivo {
+    display: flex;
+}
+
+.menu-cat-dropdown a {
+    padding: 12px 18px;
+    color: var(--calce);
+    font-size: .88rem;
+    font-weight: 600;
+    letter-spacing: .05em;
+    border-bottom: 1px solid rgba(184,129,63,.15);
+    transition: background .2s ease, color .2s ease, padding-left .2s ease;
+}
+
+.menu-cat-dropdown a:last-child {
+    border-bottom: none;
+}
+
+.menu-cat-dropdown a:hover {
+    background: var(--rame);
+    color: var(--fuliggine);
+    padding-left: 22px;
+}
+
+.portata-nome span[id] {
+    scroll-margin-top: 90px;
+}
+
+@media (max-width: 620px) {
+    .menu-home {
+        top: 12px;
+        left: 12px;
+        padding: 9px 12px;
+        font-size: .68rem;
+    }
+    .menu-cat-floating {
+        top: 12px;
+        right: 12px;
+    }
+    .menu-cat-toggle {
+        padding: 9px 12px;
+        font-size: .68rem;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<!-- Bottone fisso a sinistra -->
+<a class="menu-home" href="TavernaDiBaffoneFinitoquasi.html" aria-label="Torna al sito">
+  <span aria-hidden="true">←</span> Sito
+</a>
+
+<!-- Bottone tre linee fisso a destra -->
+<div class="menu-cat-floating">
+  <button class="menu-cat-toggle" aria-label="Apri categorie menù" onclick="toggleMenuCat()">
+    <span class="hamburger-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+    <span>Menù</span>
+  </button>
+  <div class="menu-cat-dropdown" id="dropdown-categorie">
+    <a href="#cat-antipasti" onclick="chiudiEVai('cat-antipasti')">Antipasti</a>
+    <a href="#cat-primi" onclick="chiudiEVai('cat-primi')">Primi</a>
+    <a href="#cat-secondi" onclick="chiudiEVai('cat-secondi')">Secondi</a>
+    <a href="#cat-contorni" onclick="chiudiEVai('cat-contorni')">Contorni</a>
+    <a href="#cat-dolci" onclick="chiudiEVai('cat-dolci')">Dolci</a>
+    <a href="#cat-bibite" onclick="chiudiEVai('cat-bibite')">Bibite</a>
+  </div>
+</div>
+
+<section class="intro">
+  <div class="wrap intro-inner">
+    <div class="occhiello">La Taverna Di Baffone</div>
+    <h1>Il nostro <em>menù</em></h1>
+    <p>Tradizione napoletana e campana, sapori del territorio e piatti preparati con cura.</p>
+  </div>
+</section>
+
+<section id="menu" class="intonaco">
+    <div class="wrap">
+        <div class="testata svela">
+            <div class="occhiello">Il menù</div>
+            <h2>Cosa portiamo <em>in tavola</em></h2>
+            <p>Struttura del menù pronta per essere riempita con i piatti, le descrizioni e i prezzi.</p>
+        </div>
+
+        <div class="menu-griglia">
+
+            <div class="portata svela">
+                <div class="portata-nome"><span id="cat-antipasti">Antipasti</span></div>
+                <div class="voce"><div class="voce-info"><span class="voce-nome">Nome piatto</span><span class="voce-desc">Descrizione ingredienti</span></div><span class="filetto"></span><span class="voce-prezzo">€ –</span></div>
+                <div class="voce"><div class="voce-info"><span class="voce-nome">Nome piatto</span><span class="voce-desc">Descrizione ingredienti</span></div><span class="filetto"></span><span class="voce-prezzo">€ –</span></div>
+                <div class="voce"><div class="voce-info"><span class="voce-nome">Nome piatto</span><span class="voce-desc">Descrizione ingredienti</span></div><span class="filetto"></span><span class="voce-prezzo">€ –</span></div>
+            </div>
+
+            <div class="portata svela">
+                <div class="portata-nome"><span id="cat-primi">Primi</span></div>
+                <div class="voce"><div class="voce-info"><span class="voce-nome">Nome piatto</span><span class="voce-desc">Descrizione ingredienti</span></div><span class="filetto"></span><span class="voce-prezzo">€ –</span></div>
+                <div class="voce"><div class="voce-info"><span class="voce-nome">Nome piatto</span><span class="voce-desc">Descrizione ingredienti</span></div><span class="filetto"></span><span class="voce-prezzo">€ –</span></div>
+                <div class="voce"><div class="voce-info"><span class="voce-nome">Nome piatto</span><span class="voce-desc">Descrizione ingredienti</span></div><span class="filetto"></span><span class="voce-prezzo">€ –</span></div>
+            </div>
+
+            <div class="portata svela">
+                <div class="portata-nome"><span id="cat-secondi">Secondi</span></div>
+                <div class="voce"><div class="voce-info"><span class="voce-nome">Nome piatto</span><span class="voce-desc">Descrizione ingredienti</span></div><span class="filetto"></span><span class="voce-prezzo">€ –</span></div>
+                <div class="voce"><div class="voce-info"><span class="voce-nome">Nome piatto</span><span class="voce-desc">Descrizione ingredienti</span></div><span class="filetto"></span><span class="voce-prezzo">€ –</span></div>
+                <div class="voce"><div class="voce-info"><span class="voce-nome">Nome piatto</span><span class="voce-desc">Descrizione ingredienti</span></div><span class="filetto"></span><span class="voce-prezzo">€ –</span></div>
+            </div>
+
+            <div class="portata svela">
+                <div class="portata-nome"><span id="cat-contorni">Contorni</span></div>
+                <div class="voce"><div class="voce-info"><span class="voce-nome">Nome piatto</span><span class="voce-desc">Descrizione ingredienti</span></div><span class="filetto"></span><span class="voce-prezzo">€ –</span></div>
+                <div class="voce"><div class="voce-info"><span class="voce-nome">Nome piatto</span><span class="voce-desc">Descrizione ingredienti</span></div><span class="filetto"></span><span class="voce-prezzo">€ –</span></div>
+            </div>
+
+            <div class="portata svela">
+                <div class="portata-nome"><span id="cat-dolci">Dolci</span></div>
+                <div class="voce"><div class="voce-info"><span class="voce-nome">Nome piatto</span><span class="voce-desc">Descrizione ingredienti</span></div><span class="filetto"></span><span class="voce-prezzo">€ –</span></div>
+                <div class="voce"><div class="voce-info"><span class="voce-nome">Nome piatto</span><span class="voce-desc">Descrizione ingredienti</span></div><span class="filetto"></span><span class="voce-prezzo">€ –</span></div>
+            </div>
+
+            <div class="portata svela">
+                <div class="portata-nome"><span id="cat-bibite">Bibite</span></div>
+                <div class="voce"><div class="voce-info"><span class="voce-nome">Nome</span><span class="voce-desc">Descrizione ingredienti</span></div><span class="filetto"></span><span class="voce-prezzo">€ –</span></div>
+                <div class="voce"><div class="voce-info"><span class="voce-nome">Nome </span><span class="voce-desc">Descrizione ingredienti</span></div><span class="filetto"></span><span class="voce-prezzo">€ –</span></div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<div class="menu-ritorno"><a href="TavernaDiBaffoneFinitoquasi.html">← Torna al sito</a></div>
+<footer><strong>La Taverna Di Baffone</strong><span>Giffoni Valle Piana</span></footer>
+
+<script>
+function toggleMenuCat() {
+    const dropdown = document.getElementById('dropdown-categorie');
+    dropdown.classList.toggle('attivo');
+}
+
+function chiudiEVai(id) {
+    const dropdown = document.getElementById('dropdown-categorie');
+    dropdown.classList.remove('attivo');
+    const target = document.getElementById(id);
+    if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+}
+
+// Chiude il menu se si clicca in un punto qualsiasi fuori dal pulsante
+document.addEventListener('click', function(event) {
+    const floatingNav = document.querySelector('.menu-cat-floating');
+    if (floatingNav && !floatingNav.contains(event.target)) {
+        document.getElementById('dropdown-categorie').classList.remove('attivo');
+    }
+});
+</script>
+
+</body>
+</html>
