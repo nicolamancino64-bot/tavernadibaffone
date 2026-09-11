@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy e cookie — La Taverna Di Baffone</title>
+<meta name="description" content="Informativa privacy e cookie de La Taverna Di Baffone, Giffoni Valle Piana. Questo sito non usa cookie né strumenti di tracciamento.">
+<meta name="theme-color" content="#221A15">
+<meta name="robots" content="index, follow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23221A15'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' font-weight='700' fill='%23B8813F' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="caratteri/karla-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="caratteri.css">
+<style>
+
+:root{--fuliggine:#221A15;--fuliggine-2:#2E241D;--calce:#F4EDE1;--calce-2:#EAE0CE;--vino:#7B2D26;--vino-chiaro:#A34237;--rame:#B8813F;--oliva:#6B7248;--inchiostro:#1A1310;--display:'Bodoni Moda',Georgia,serif;--testo:'Karla',system-ui,sans-serif;--curva:cubic-bezier(.22,1,.36,1);--max:1180px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--calce);color:var(--inchiostro);font-family:var(--testo);font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--rame);outline-offset:4px;border-radius:2px}
+.wrap{max-width:760px;margin:0 auto;padding:0 28px}
+
+/* ---------- ritorno fisso ---------- */
+.torna{position:fixed;top:18px;left:18px;z-index:200;display:inline-flex;align-items:center;gap:8px;padding:10px 15px;border:1px solid var(--rame);border-radius:2px;background:rgba(34,26,21,.94);color:var(--calce);font-size:.76rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;box-shadow:0 8px 24px rgba(0,0,0,.18);transition:background .3s ease,color .3s ease,transform .3s var(--curva)}
+.torna:hover{background:var(--rame);color:var(--fuliggine);transform:translateY(-2px)}
+
+/* ---------- intestazione ---------- */
+.intro{padding:104px 0 58px;text-align:center;background:var(--fuliggine);color:var(--calce);position:relative;overflow:hidden}
+.intro::before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 50% 0,rgba(184,129,63,.16),transparent 60%)}
+.intro-int{position:relative;z-index:1}
+.occhiello{font-size:.72rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--rame);display:inline-flex;align-items:center;gap:12px;margin-bottom:18px}
+.occhiello::before{content:"";width:26px;height:2px;background:currentColor}
+.intro h1{font-family:var(--display);font-size:clamp(2.2rem,5vw,3.4rem);font-weight:400;line-height:1.1;margin-bottom:14px}
+.intro p{color:rgba(244,237,225,.7);font-size:1rem;max-width:56ch;margin:0 auto}
+
+/* ---------- corpo ---------- */
+main{padding:66px 0 96px}
+.riquadro{border:1px solid rgba(107,114,72,.5);border-left:3px solid var(--oliva);background:rgba(107,114,72,.09);border-radius:2px;padding:22px 24px;margin-bottom:44px}
+.riquadro strong{font-weight:700}
+h2{font-family:var(--display);font-size:1.62rem;font-weight:600;line-height:1.2;color:var(--vino);margin:44px 0 14px;padding-bottom:10px;border-bottom:2px solid rgba(123,45,38,.2)}
+h2:first-of-type{margin-top:0}
+h3{font-family:var(--testo);font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(26,19,16,.55);margin:26px 0 8px}
+p{margin-bottom:14px;max-width:68ch}
+ul{margin:0 0 18px 22px;max-width:68ch}
+li{margin-bottom:9px}
+main a{color:var(--vino);font-weight:600;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+main a:hover{color:var(--vino-chiaro)}
+.segnaposto{background:rgba(163,66,55,.14);border-bottom:2px solid var(--vino-chiaro);padding:1px 5px;border-radius:2px;font-weight:700;white-space:nowrap}
+.aggiornata{margin-top:52px;padding-top:22px;border-top:1px solid rgba(26,19,16,.16);font-size:.86rem;color:rgba(26,19,16,.6)}
+
+/* ---------- pié di pagina ---------- */
+footer{background:var(--inchiostro);color:rgba(244,237,225,.5);padding:38px 0;text-align:center;font-size:.82rem;line-height:1.8}
+footer strong{font-family:var(--display);font-size:1.1rem;color:var(--calce);font-weight:600;display:block;margin-bottom:6px}
+footer a{color:var(--rame)}
+
+@media (max-width:620px){
+    body{font-size:16px}
+    .wrap{padding:0 20px}
+    .torna{top:12px;left:12px;padding:9px 12px;font-size:.68rem}
+    .intro{padding:92px 0 46px}
+    main{padding:48px 0 72px}
+    h2{font-size:1.4rem;margin-top:36px}
+}
+
+@media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{transition-duration:.001ms !important;animation-duration:.001ms !important}
+}
+
+</style>
+</head>
+<body>
+
+<a class="torna" href="index.html"><span aria-hidden="true">←</span> Sito</a>
+
+<section class="intro">
+    <div class="wrap intro-int">
+        <div class="occhiello">Informativa</div>
+        <h1>Privacy e cookie</h1>
+        <p>Come trattiamo i dati di chi visita questo sito, spiegato senza giri di parole.</p>
+    </div>
+</section>
+
+<main>
+    <div class="wrap">
+
+        <!-- ==============================================================
+             DA COMPILARE PRIMA DI PUBBLICARE
+             Tutto quello che e evidenziato in rosso nella pagina (classe
+             "segnaposto") va sostituito con i dati veri dell'attivita.
+             Cercare la parola "segnaposto" in questo file per trovarli tutti.
+
+             NOTA: questo testo descrive fedelmente quello che il sito fa
+             oggi. Non e un parere legale: e buona norma farlo rivedere dal
+             proprio commercialista o da un consulente privacy prima della
+             pubblicazione, soprattutto se in futuro verranno aggiunti
+             statistiche, pixel pubblicitari o prenotazioni via modulo.
+             ============================================================== -->
+
+        <div class="riquadro">
+            <p style="margin-bottom:0"><strong>In breve:</strong> questo sito non usa cookie, non ha statistiche, non ha pulsanti social e non carica nulla da server esterni. Non c'è nessun banner da accettare perché non c'è nulla da acconsentire. I dati che scrivete nel modulo di prenotazione non arrivano a noi attraverso il sito: aprono WhatsApp sul vostro telefono con il messaggio già scritto, e siete voi a decidere se inviarlo.</p>
+        </div>
+
+        <h2>1. Chi tratta i vostri dati</h2>
+        <p>
+            Il titolare del trattamento è
+            <span class="segnaposto">RAGIONE SOCIALE S.R.L.</span>,
+            con sede in Via De' Rossi, 5 — 84095 Giffoni Valle Piana (SA),
+            P. IVA <span class="segnaposto">IT00000000000</span>.
+        </p>
+        <p>
+            Per qualsiasi questione riguardante i vostri dati potete scriverci a
+            <span class="segnaposto">INDIRIZZO@EMAIL.IT</span>
+            o telefonare al <a href="tel:+393922024303">+39 392 202 4303</a>.
+        </p>
+
+        <h2>2. Cookie</h2>
+        <p>
+            <strong>Questo sito non installa cookie di alcun tipo</strong>, né propri né di terze parti.
+            Non usa nemmeno tecnologie equivalenti come <em>local storage</em>, <em>session storage</em>
+            o impronte digitali del browser (<em>fingerprinting</em>).
+        </p>
+        <p>
+            Non troverete quindi il consueto banner: per l'art. 122 del Codice Privacy il consenso
+            serve quando si archiviano informazioni sul dispositivo dell'utente, e qui non ne
+            archiviamo nessuna.
+        </p>
+
+        <h3>Perché non ci sono nemmeno i font di Google</h3>
+        <p>
+            I caratteri tipografici del sito (Bodoni Moda e Karla) sono copiati sul nostro stesso
+            server invece di essere richiamati da Google Fonts. Se fossero richiamati da Google,
+            il vostro browser comunicherebbe il vostro indirizzo IP a un server statunitense a ogni
+            pagina aperta, senza che voi possiate scegliere. Così non succede.
+        </p>
+
+        <h2>3. Dati di navigazione</h2>
+        <p>
+            Come qualunque sito, il server che ospita queste pagine può registrare automaticamente
+            negli <em>access log</em> alcuni dati tecnici: indirizzo IP, data e ora della richiesta,
+            pagina richiesta, tipo di browser. Sono dati che i sistemi acquisiscono per il solo fatto
+            di funzionare e servono a garantire la sicurezza e la stabilità del sito.
+        </p>
+        <ul>
+            <li><strong>Base giuridica:</strong> legittimo interesse del titolare alla sicurezza del servizio (art. 6.1.f GDPR).</li>
+            <li><strong>Conservazione:</strong> secondo i tempi tecnici del fornitore di hosting, <span class="segnaposto">NOME HOSTING</span>, che opera come responsabile del trattamento.</li>
+            <li>Questi dati non vengono usati per profilare né per identificare i visitatori.</li>
+        </ul>
+
+        <h2>4. Il modulo di prenotazione</h2>
+        <p>
+            Nel modulo chiediamo <strong>nome, numero di persone, giorno, ora</strong> ed eventuali
+            <strong>note</strong> (per esempio un seggiolone o un'intolleranza). È importante capire
+            come funziona:
+        </p>
+        <ul>
+            <li>Il sito <strong>non ha un archivio e non invia niente da solo.</strong> Quando premete "Prenota su WhatsApp", il sito compone un messaggio di testo e apre WhatsApp sul vostro dispositivo con quel messaggio già pronto.</li>
+            <li>Siete voi a decidere se premere invio. Finché non lo fate, quei dati restano solo sul vostro telefono.</li>
+            <li>Se inviate il messaggio, i dati arrivano a noi <strong>tramite WhatsApp</strong> e li trattiamo per gestire la prenotazione, cioè per eseguire una vostra richiesta (art. 6.1.b GDPR).</li>
+            <li>Se nelle note indicate un'allergia o un'intolleranza state comunicando un dato relativo alla salute: lo usiamo solo per prepararvi il piatto in sicurezza e non lo conserviamo oltre la serata.</li>
+            <li><strong>Conservazione:</strong> le conversazioni di prenotazione vengono cancellate <span class="segnaposto">DOPO 6 MESI</span>, salvo obblighi contabili o fiscali.</li>
+        </ul>
+
+        <h3>WhatsApp è un servizio di terzi</h3>
+        <p>
+            WhatsApp è gestito da Meta Platforms Ireland Ltd. Aprendo la chat, il trattamento dei
+            vostri dati da parte di WhatsApp segue le sue condizioni, non le nostre: potete leggerle
+            nell'<a href="https://www.whatsapp.com/legal/privacy-policy-eea" target="_blank" rel="noopener">informativa privacy di WhatsApp</a>.
+            Se preferite non usare WhatsApp, potete sempre prenotare telefonando al
+            <a href="tel:+393922024303">+39 392 202 4303</a>.
+        </p>
+
+        <h2>5. La mappa di Google</h2>
+        <p>
+            Nella sezione "Dove siamo" la mappa <strong>non è caricata all'apertura della pagina</strong>:
+            al suo posto trovate un riquadro con un bottone. La mappa vera di Google Maps compare solo
+            se premete quel bottone.
+        </p>
+        <p>
+            È una scelta voluta. Un riquadro Google inserito direttamente nella pagina invierebbe il
+            vostro indirizzo IP a Google appena aprite il sito, senza che possiate opporvi. Con il
+            caricamento su richiesta, siete voi a decidere. Premendo il bottone si applica
+            l'<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">informativa privacy di Google</a>.
+        </p>
+
+        <h2>6. Recensioni</h2>
+        <p>
+            Le recensioni riportate nella pagina iniziale sono estratti di recensioni pubbliche
+            lasciate dai clienti su Google Maps, con il nome così come appare pubblicamente lì.
+            Se siete l'autore di una di queste recensioni e non desiderate che compaia sul sito,
+            scriveteci e la rimuoviamo.
+        </p>
+
+        <h2>7. Dove finiscono i dati</h2>
+        <p>
+            Non vendiamo, non cediamo e non comunichiamo i vostri dati a nessuno per finalità
+            commerciali. I soli soggetti che possono trattarli sono il fornitore di hosting del sito
+            e, se scegliete di usarli, WhatsApp e Google Maps come descritto sopra. Alcuni di questi
+            servizi appartengono a società con sede negli Stati Uniti e possono comportare un
+            trasferimento di dati fuori dall'Unione Europea, sulla base delle garanzie previste dai
+            rispettivi fornitori.
+        </p>
+
+        <h2>8. I vostri diritti</h2>
+        <p>
+            Il Regolamento europeo 2016/679 (GDPR) vi riconosce, negli articoli dal 15 al 22, il
+            diritto di:
+        </p>
+        <ul>
+            <li>sapere quali vostri dati trattiamo e ottenerne copia;</li>
+            <li>farli correggere se sono sbagliati o incompleti;</li>
+            <li>chiederne la cancellazione;</li>
+            <li>chiederci di limitarne o di interromperne l'uso;</li>
+            <li>opporvi al trattamento fondato sul legittimo interesse;</li>
+            <li>ricevere i dati in un formato leggibile da un altro sistema.</li>
+        </ul>
+        <p>
+            Per esercitarli basta scriverci a
+            <span class="segnaposto">INDIRIZZO@EMAIL.IT</span>:
+            rispondiamo entro trenta giorni. Se ritenete che i vostri dati siano trattati in modo
+            scorretto potete rivolgervi al
+            <a href="https://www.garanteprivacy.it" target="_blank" rel="noopener">Garante per la protezione dei dati personali</a>.
+        </p>
+
+        <h2>9. Modifiche</h2>
+        <p>
+            Se cambieremo il modo in cui il sito funziona — per esempio aggiungendo statistiche di
+            visita o un modulo di prenotazione che salva i dati — aggiorneremo questa pagina e, se
+            servirà, chiederemo il consenso prima di attivare quegli strumenti.
+        </p>
+
+        <p class="aggiornata">Ultimo aggiornamento: <span class="segnaposto">GIORNO/MESE/ANNO</span></p>
+
+    </div>
+</main>
+
+<footer>
+    <div class="wrap">
+        <strong>La Taverna Di Baffone</strong>
+        Via De' Rossi, 5 — 84095 Giffoni Valle Piana (SA)<br>
+        <a href="index.html">Torna al sito</a> · <a href="menu.html">Menù</a>
+    </div>
+</footer>
+
+</body>
+</html>
