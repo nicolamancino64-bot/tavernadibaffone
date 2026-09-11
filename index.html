@@ -6,9 +6,105 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>La Taverna Di Baffone — Cucina napoletana e campana a Giffoni Valle Piana</title>
         <meta name="description" content="La Taverna Di Baffone, cucina napoletana e campana a Giffoni Valle Piana. Pranzo, cena e aperto fino a tardi. Tavoli all'esterno, prenotazioni, opzioni vegetariane, vegane e senza glutine.">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;0,6..96,700;1,6..96,400;1,6..96,600&family=Karla:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+        <meta name="theme-color" content="#221A15">
+        <meta name="robots" content="index, follow">
+
+        <!-- ==============================================================
+             INDIRIZZO DEL SITO
+             Sostituire www.tavernadibaffone.it con il dominio vero in tutte
+             e quattro le righe qui sotto (canonical + og:url + og:image +
+             quella dentro i dati strutturati piu in basso). Finche il sito
+             non ha un dominio proprio queste righe non fanno danno, ma
+             nemmeno il loro lavoro.
+             ============================================================== -->
+        <link rel="canonical" href="https://www.tavernadibaffone.it/">
+
+        <!-- Anteprima quando il link viene mandato su WhatsApp, Facebook, Instagram.
+             og:image dovrebbe essere una foto orizzontale 1200x630: quella qui sotto
+             e un ripiego, conviene prepararne una fatta apposta. -->
+        <meta property="og:type" content="restaurant">
+        <meta property="og:locale" content="it_IT">
+        <meta property="og:site_name" content="La Taverna Di Baffone">
+        <meta property="og:title" content="La Taverna Di Baffone — Giffoni Valle Piana">
+        <meta property="og:description" content="Cucina napoletana e campana a Giffoni Valle Piana. Pranzo, cena e aperto fino a tardi. Prenota il tuo tavolo su WhatsApp.">
+        <meta property="og:url" content="https://www.tavernadibaffone.it/">
+        <meta property="og:image" content="https://www.tavernadibaffone.it/immagini/tagliata.jpeg">
+        <meta property="og:image:alt" content="Tagliata di manzo su letto di rucola">
+        <meta name="twitter:card" content="summary_large_image">
+
+        <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23221A15'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' font-weight='700' fill='%23B8813F' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+        <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23221A15'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' font-weight='700' fill='%23B8813F' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+        <link rel="preload" href="caratteri/karla-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="caratteri/bodoni-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="stylesheet" href="caratteri.css">
+
+        <!-- ==============================================================
+             DATI STRUTTURATI (schema.org)
+             Servono a Google per mostrare orari, indirizzo e valutazione
+             direttamente nei risultati di ricerca e nelle mappe.
+             ATTENZIONE: gli orari sono ripetuti anche nella tabella "Orari"
+             e nella tabella ORARI dentro lo script in fondo alla pagina.
+             Se cambiate gli orari, cambiateli in tutti e tre i posti.
+             ============================================================== -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Restaurant",
+          "name": "La Taverna Di Baffone",
+          "description": "Cucina napoletana e campana a Giffoni Valle Piana. Pranzo, cena e aperto fino a tardi.",
+          "url": "https://www.tavernadibaffone.it/",
+          "telephone": "+393922024303",
+          "priceRange": "€€",
+          "servesCuisine": ["Napoletana", "Campana", "Italiana del Sud", "Mediterranea"],
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Via De' Rossi, 5",
+            "addressLocality": "Giffoni Valle Piana",
+            "addressRegion": "SA",
+            "postalCode": "84095",
+            "addressCountry": "IT"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 40.7169,
+            "longitude": 14.9423
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Thursday", "Friday", "Saturday"],
+              "opens": "12:30",
+              "closes": "15:00"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Thursday", "Friday", "Saturday"],
+              "opens": "18:00",
+              "closes": "00:00"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": "Sunday",
+              "opens": "12:30",
+              "closes": "15:00"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": "Wednesday",
+              "opens": "00:00",
+              "closes": "00:00"
+            }
+          ],
+          "acceptsReservations": "True",
+          "hasMenu": "https://www.tavernadibaffone.it/menu.html",
+          "amenityFeature": [
+            { "@type": "LocationFeatureSpecification", "name": "Tavoli all'esterno", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Accessibile in sedia a rotelle", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Seggioloni disponibili", "value": true },
+            { "@type": "LocationFeatureSpecification", "name": "Accetta carte di credito", "value": true }
+          ]
+        }
+        </script>
 
         <style>
                      /* ============================================================
@@ -301,12 +397,10 @@
                          display: flex;
                          align-items: center;
                          justify-content: center;
-                     }
-                     /* Il logo e scomposto: i due volti in alto, il marchio dipinto sotto.
-            Ogni pezzo ha le sue proporzioni native bloccate, quindi nulla si stira mai.
-            --insegna-w regola tutto l'insieme da un solo valore. */
-                     .insegna {
-                         --insegna-w: clamp(300px,46vw,560px);
+                         /* il min(86vw,...) impedisce all'insegna di uscire dallo schermo
+                            sui telefoni stretti, dove il minimo di 300px era piu largo
+                            dello spazio disponibile e il logo veniva tagliato a destra */
+                         --insegna-w: min(86vw, clamp(300px,46vw,560px));
                          flex-direction: column;
                          gap: 0;
                          padding-bottom: 3.2em;
@@ -669,7 +763,10 @@
             SEZIONI
             ============================================================ */
                      section {
-                         padding: 110px 0
+                         padding: 110px 0;
+                         /* senza questo, un salto da "Cucina" o "Orari" nel menu
+                            fermava il titolo esattamente sotto la barra fissa */
+                         scroll-margin-top: 90px;
                      }
 
                      .testata {
@@ -859,6 +956,13 @@
                          border-bottom: 1px solid rgba(184,129,63,.24);
                      }
 
+                         /* la foto riempie sempre il riquadro 4:3 senza deformarsi */
+                         .piatto-foto img {
+                             width: 100%;
+                             height: 100%;
+                             object-fit: cover;
+                         }
+
                          .piatto-foto svg {
                              width: 52px;
                              height: 52px;
@@ -888,77 +992,6 @@
                              color: rgba(244,237,225,.62);
                              line-height: 1.7
                          }
-
-                     /* ---------- Menù ---------- */
-                     #menu {
-                         background: var(--calce-2)
-                     }
-
-                     .menu-griglia {
-                         display: grid;
-                         grid-template-columns: repeat(auto-fit,minmax(330px,1fr));
-                         gap: 20px 56px;
-                     }
-
-                     .portata {
-                         margin-bottom: 14px
-                     }
-
-                     .portata-nome {
-                         font-family: var(--display);
-                         font-size: 1.55rem;
-                         font-weight: 400;
-                         font-style: italic;
-                         color: var(--vino);
-                         padding-bottom: 12px;
-                         margin-bottom: 8px;
-                         border-bottom: 2px solid rgba(123,45,38,.24);
-                     }
-
-                     .voce {
-                         display: flex;
-                         align-items: baseline;
-                         gap: 12px;
-                         padding: 13px 8px;
-                         border-radius: 2px;
-                         transition: background .3s ease,padding-left .3s var(--curva);
-                     }
-
-                         .voce:hover {
-                             background: rgba(184,129,63,.16);
-                             padding-left: 16px
-                         }
-
-                     .voce-info {
-                         flex: 1;
-                         min-width: 0
-                     }
-
-                     .voce-nome {
-                         font-weight: 600;
-                         font-size: 1rem;
-                         display: block
-                     }
-
-                     .voce-desc {
-                         font-size: .86rem;
-                         color: rgba(26,19,16,.56);
-                         font-style: italic
-                     }
-
-                     .filetto {
-                         flex: 1;
-                         border-bottom: 1px dotted rgba(26,19,16,.3);
-                         transform: translateY(-4px);
-                         min-width: 22px;
-                     }
-
-                     .voce-prezzo {
-                         font-family: var(--display);
-                         font-weight: 600;
-                         color: var(--vino);
-                         white-space: nowrap;
-                     }
 
                      /* ---------- Orari ---------- */
                      #orari {
@@ -1161,16 +1194,53 @@
                              font-size: .98rem
                          }
 
+                     /* ---------- Mappa a caricamento su richiesta ----------
+                        Il riquadro decorativo resta come anteprima; la mappa vera
+                        di Google entra solo quando il visitatore preme il bottone.
+                        Cosi nessun dato parte verso Google senza il suo consenso
+                        ed il sito non ha bisogno del banner dei cookie. */
                      .mappa {
                          aspect-ratio: 1/1;
                          border: 1px solid rgba(26,19,16,.16);
                          border-radius: 3px;
-                         background: repeating-linear-gradient(0deg,rgba(26,19,16,.05) 0 1px,transparent 1px 42px), repeating-linear-gradient(90deg,rgba(26,19,16,.05) 0 1px,transparent 1px 42px), var(--calce-2);
+                         position: relative;
+                         overflow: hidden;
+                         background: var(--calce-2);
+                     }
+
+                     .mappa-anteprima {
+                         position: absolute;
+                         inset: 0;
                          display: flex;
                          align-items: center;
                          justify-content: center;
+                         background: repeating-linear-gradient(0deg,rgba(26,19,16,.05) 0 1px,transparent 1px 42px), repeating-linear-gradient(90deg,rgba(26,19,16,.05) 0 1px,transparent 1px 42px), var(--calce-2);
+                     }
+
+                     .mappa-invito {
                          position: relative;
-                         overflow: hidden;
+                         z-index: 2;
+                         display: flex;
+                         flex-direction: column;
+                         align-items: center;
+                         gap: 16px;
+                         text-align: center;
+                         padding: 26px;
+                         max-width: 340px;
+                         margin-top: 74px;
+                     }
+
+                     .mappa-testo {
+                         font-size: .84rem;
+                         line-height: 1.6;
+                         color: rgba(26,19,16,.66);
+                     }
+
+                     .mappa iframe {
+                         display: block;
+                         width: 100%;
+                         height: 100%;
+                         border: 0;
                      }
 
                      .puntina {
@@ -1251,6 +1321,24 @@
                          font-weight: 600;
                          color: var(--vino);
                          line-height: 1;
+                     }
+
+                         .voto-num-piccolo {
+                             font-size: 1.9rem
+                         }
+
+                     /* visibile solo ai lettori di schermo: le stelle sono grafiche,
+                        senza questo un non vedente sentirebbe "stella stella stella" */
+                     .solo-lettori {
+                         position: absolute;
+                         width: 1px;
+                         height: 1px;
+                         padding: 0;
+                         margin: -1px;
+                         overflow: hidden;
+                         clip-path: inset(50%);
+                         white-space: nowrap;
+                         border: 0;
                      }
 
                      .stelle {
@@ -1338,64 +1426,12 @@
                              gap: 16px
                          }
 
-                     /* ---------- Chiusura ---------- */
-                     .chiusura {
-                         background: var(--fuliggine);
-                         color: var(--calce);
-                         text-align: center;
-                         padding: 110px 0;
-                         position: relative;
-                         overflow: hidden;
-                     }
-
-                         .chiusura::before {
-                             content: "";
-                             position: absolute;
-                             bottom: -40%;
-                             left: 50%;
-                             transform: translateX(-50%);
-                             width: 820px;
-                             height: 820px;
-                             background: radial-gradient(circle,rgba(123,45,38,.2) 0%,transparent 68%);
-                             pointer-events: none;
-                         }
-
-                     .chiusura-int {
-                         position: relative
-                     }
-
-                     .chiusura h2 {
-                         font-size: clamp(2.2rem,5.4vw,3.9rem);
-                         font-weight: 400;
-                         margin-bottom: 22px;
-                     }
-
-                         .chiusura h2 em {
-                             font-style: italic;
-                             font-weight: 600;
-                             color: var(--rame)
-                         }
-
-                     .chiusura p {
-                         color: rgba(244,237,225,.72);
-                         max-width: 520px;
-                         margin: 0 auto 38px
-                     }
-
                      footer {
                          background: var(--inchiostro);
                          color: rgba(244,237,225,.55);
-                         padding: 44px 0;
+                         padding: 56px 0 40px;
                          font-size: .86rem;
-                         text-align: center;
                      }
-
-                         footer .marchio {
-                             color: var(--calce);
-                             align-items: center;
-                             margin-bottom: 16px;
-                             font-size: 1.24rem;
-                         }
 
                          footer a {
                              color: var(--rame);
@@ -1406,9 +1442,113 @@
                                  opacity: .72
                              }
 
-                     .footer-riga {
-                         margin-top: 9px
+                     .footer-griglia {
+                         display: grid;
+                         grid-template-columns: 1.6fr 1fr 1fr 1fr;
+                         gap: 40px;
+                         align-items: start;
+                         text-align: left;
                      }
+
+                     .footer-blocco {
+                         line-height: 1.9
+                     }
+
+                         footer .marchio {
+                             color: var(--calce);
+                             font-size: 1.24rem;
+                             margin-bottom: 10px;
+                         }
+
+                     .footer-titolo {
+                         font-size: .68rem;
+                         font-weight: 700;
+                         letter-spacing: .2em;
+                         text-transform: uppercase;
+                         color: rgba(244,237,225,.42);
+                         margin-bottom: 10px;
+                     }
+
+                     .footer-riga {
+                         max-width: 34ch;
+                         line-height: 1.7
+                     }
+
+                     .footer-legale {
+                         margin-top: 44px;
+                         padding-top: 26px;
+                         border-top: 1px solid rgba(244,237,225,.12);
+                         font-size: .78rem;
+                         line-height: 1.8;
+                         color: rgba(244,237,225,.44);
+                     }
+
+                         .footer-legale strong {
+                             color: rgba(244,237,225,.66);
+                             font-weight: 600;
+                         }
+
+                     .footer-copy {
+                         margin-top: 10px
+                     }
+
+                     /* ============================================================
+            BARRA AZIONI — solo telefono
+            Il pollice arriva comodamente solo in fondo allo schermo: le tre
+            azioni che contano vivono li. Nascosta su computer, dove la barra
+            in alto con "Prenota" e sempre visibile.
+            ============================================================ */
+                     .barra-azioni {
+                         display: none;
+                         position: fixed;
+                         left: 0;
+                         right: 0;
+                         bottom: 0;
+                         z-index: 98;
+                         background: rgba(34,26,21,.97);
+                         backdrop-filter: blur(10px);
+                         border-top: 1px solid rgba(184,129,63,.3);
+                         /* rispetta la barra gestuale degli iPhone senza tasto */
+                         padding-bottom: env(safe-area-inset-bottom, 0px);
+                     }
+
+                     .azione {
+                         flex: 1;
+                         display: flex;
+                         flex-direction: column;
+                         align-items: center;
+                         justify-content: center;
+                         gap: 5px;
+                         /* 56px: sopra il minimo di 44px consigliato per il tocco */
+                         min-height: 56px;
+                         padding: 9px 4px;
+                         color: var(--calce);
+                         font-size: .68rem;
+                         font-weight: 700;
+                         letter-spacing: .1em;
+                         text-transform: uppercase;
+                         text-align: center;
+                         -webkit-tap-highlight-color: transparent;
+                         transition: background .2s ease;
+                     }
+
+                         .azione svg {
+                             width: 21px;
+                             height: 21px;
+                         }
+
+                         .azione:active {
+                             background: rgba(184,129,63,.2)
+                         }
+
+                     .azione-primaria {
+                         background: var(--vino);
+                         color: var(--calce);
+                     }
+
+                         .azione-primaria:active {
+                             background: var(--vino-chiaro)
+                         }
 
                      /* ============================================================
             MOTION
@@ -1563,11 +1703,6 @@
                          }
                      }
 
-                     /* il marchio resta fermo: e l'insegna, non deve ballare */
-                     .marchio-testo {
-                         transform: none
-                     }
-
                      /* movimento continuo, sfasato fra i due */
                      .volto-sx {
                          animation: cennoLei 9s ease-in-out 1.8s infinite
@@ -1630,10 +1765,6 @@
                          }
                      }
 
-                     .marchio-blocco {
-                         transform-origin: 50% 18%
-                     }
-
                      .filo {
                          transform-origin: 50% 50%
                      }
@@ -1688,6 +1819,7 @@
 
                      .marchio-blocco {
                          opacity: 0;
+                         transform-origin: 50% 18%;
                          animation: insegnaEntra 1.05s var(--curva) .5s forwards, dondolo 7.5s ease-in-out 1.9s infinite;
                      }
 
@@ -1899,6 +2031,19 @@
     line-height: 1.6;
 }
 
+/* avviso mostrato quando giorno o ora scelti non rientrano negli orari */
+.form-avviso {
+    margin-top: 14px;
+    padding: 12px 14px;
+    border: 1px solid rgba(163,66,55,.6);
+    border-left: 3px solid var(--vino-chiaro);
+    border-radius: 2px;
+    background: rgba(163,66,55,.14);
+    color: #F6D9D3;
+    font-size: .88rem;
+    line-height: 1.55;
+}
+
 .btn-whatsapp {
     width: 100%;
     margin-top: 22px;
@@ -1924,29 +2069,6 @@
     height: 19px;
     flex: 0 0 auto;
 }
-
-@media (max-width:980px) {
-    .prenotazione-griglia {
-        grid-template-columns: 1fr;
-        gap: 42px;
-    }
-}
-
-@media (max-width:520px) {
-    .modulo-prenotazione {
-        padding: 24px 20px;
-    }
-
-    .form-griglia {
-        grid-template-columns: 1fr;
-        gap: 16px;
-    }
-
-    .form-campo.intera {
-        grid-column: auto;
-    }
-}
-
                      /* ============================================================
             RESPONSIVE
             ============================================================ */
@@ -1963,9 +2085,29 @@
                          section {
                              padding: 84px 0
                          }
+
+                         .prenotazione-griglia {
+                             grid-template-columns: 1fr;
+                             gap: 42px
+                         }
                      }
 
                      @media (max-width:820px) {
+                         /* la barra azioni compare e la pagina si accorcia di
+                            altrettanto, cosi non copre mai la fine del contenuto */
+                         .barra-azioni {
+                             display: flex
+                         }
+
+                         body {
+                             padding-bottom: calc(66px + env(safe-area-inset-bottom, 0px))
+                         }
+
+                         .footer-griglia {
+                             grid-template-columns: 1fr 1fr;
+                             gap: 30px
+                         }
+
                          .voci {
                              position: fixed;
                              top: 0;
@@ -1977,14 +2119,23 @@
                              justify-content: center;
                              gap: 30px;
                              transform: translateX(100%);
-                             transition: transform .48s var(--curva);
+                             /* nascosto anche alla tastiera e ai lettori di schermo
+                                finché è chiuso: con il solo translate restava raggiungibile con TAB */
+                             visibility: hidden;
+                             transition: transform .48s var(--curva), visibility .48s var(--curva);
                              box-shadow: -18px 0 46px rgba(0,0,0,.4);
                              z-index: 99;
                          }
 
                              .voci.aperto {
-                                 transform: translateX(0)
+                                 transform: translateX(0);
+                                 visibility: visible
                              }
+
+                         /* la pagina non scorre dietro al pannello aperto */
+                         body.menu-aperto {
+                             overflow: hidden
+                         }
 
                              .voci a {
                                  font-size: 1rem
@@ -1992,7 +2143,8 @@
 
                          .hamburger {
                              display: block;
-                             z-index: 101
+                             z-index: 101;
+                             flex-shrink: 0
                          }
 
                          .prenota {
@@ -2019,10 +2171,6 @@
                              white-space: nowrap;
                          }
 
-                         .hamburger {
-                             flex-shrink: 0;
-                         }
-
                          .hero {
                              padding-top: 118px
                          }
@@ -2039,10 +2187,6 @@
                              border-top: 1px solid rgba(244,237,225,.2);
                              padding-top: 8px
                          }
-
-                         .menu-griglia {
-                             gap: 14px 30px
-                         }
                      }
 
                      @media (max-width:520px) {
@@ -2052,6 +2196,18 @@
 
                          .wrap, .hero-int, .barra-int {
                              padding: 0 20px
+                         }
+
+                         /* sui telefoni il bottone lungo lasciava all'insegna solo
+                            ~130px: il nome andava a capo tre volte e la barra fissa
+                            arrivava a 100px di altezza. Etichetta corta, barra bassa. */
+                         .prenota-esteso {
+                             display: none
+                         }
+
+                         .marchio {
+                             font-size: 1rem;
+                             max-width: 58vw
                          }
 
                          .bottoni {
@@ -2082,6 +2238,35 @@
                              .giorno:hover {
                                  padding-left: 26px
                              }
+
+                         .modulo-prenotazione {
+                             padding: 24px 20px
+                         }
+
+                         .form-griglia {
+                             grid-template-columns: 1fr;
+                             gap: 16px
+                         }
+
+                         .form-campo.intera {
+                             grid-column: auto
+                         }
+
+                         .footer-griglia {
+                             grid-template-columns: 1fr;
+                             gap: 26px
+                         }
+
+                         /* la mappa quadrata su un telefono stretto diventa
+                            una striscia altissima: qui sta meglio 4:3 */
+                         .mappa {
+                             aspect-ratio: 4/3
+                         }
+
+                         .mappa-invito {
+                             margin-top: 58px;
+                             padding: 18px
+                         }
                      }
 
                      /* rispetto delle preferenze di movimento */
@@ -2163,7 +2348,7 @@
                     <a href="#dove">Dove siamo</a>
                 </div>
 
-                <a class="prenota" href="#prenotazione">Prenota un tavolo</a>
+                <a class="prenota" href="#prenotazione">Prenota<span class="prenota-esteso"> un tavolo</span></a>
 
                 <button class="hamburger" id="hamburger" aria-label="Apri il menù" aria-expanded="false" aria-controls="voci">
                     <span></span><span></span><span></span>
@@ -2221,7 +2406,7 @@
 
                     <div class="bottoni">
                         <a class="btn btn-pieno" href="menu.html">Guarda il menù</a>
-                        <a class="btn btn-vuoto" href="https://maps.google.com/maps?saddr=&daddr=Via%20De%27%20Rossi%205,%2084095,%20Giffoni%20Valle%20Piana%20Italia@40.7169,14.9423" target="_blank" rel="noopener">Come arrivare</a>
+                        <a class="btn btn-vuoto" href="https://www.google.com/maps/dir/?api=1&destination=La+Taverna+di+Baffone%2C+Via+De%27+Rossi+5%2C+84095+Giffoni+Valle+Piana+SA" target="_blank" rel="noopener">Come arrivare</a>
                     </div>
 
                     <div class="stato" id="stato">
@@ -2298,7 +2483,7 @@
                 <div class="piatti svela-serie">
                     <article class="piatto">
                         <div class="piatto-foto">
-                            <img src="immagini/tagliata.jpeg" alt="Tagliata di manzo con rucola">
+                            <img src="immagini/tagliata.jpeg" alt="Tagliata di manzo con rucola" loading="lazy" decoding="async">
                         </div>
                         <div class="piatto-corpo">
                             <div class="occhiello">Specialità</div>
@@ -2306,12 +2491,10 @@
                             <p>Straccetti di manzo grigliati su letto di rucola fresca.</p>
                         </div>
                     </article>
-                </div>
 
-                <div class="piatti svela-serie">
                     <article class="piatto">
                         <div class="piatto-foto">
-                            <img src="immagini/dolce1.jpeg" alt="Tiramisù fatto in casa">
+                            <img src="immagini/dolce1.jpeg" alt="Tiramisù fatto in casa" loading="lazy" decoding="async">
                         </div>
                         <div class="piatto-corpo">
                             <div class="occhiello">Dolce della Casa</div>
@@ -2319,20 +2502,20 @@
                             <p>Soffice crema al mascarpone, savoiardi imbevuti nel caffè e spolverata di cacao.</p>
                         </div>
                     </article>
-                </div>
 
-                <div class="piatti svela-serie">
+                    <!-- MODELLO PER UN NUOVO PIATTO — togliere i commenti, mettere la foto
+                         dentro la cartella "immagini" e sostituire nome, categoria e testo.
                     <article class="piatto">
                         <div class="piatto-foto">
-                            <img src="immagini/nome foto.jpeg" alt="nome foto">
+                            <img src="immagini/nome-foto.jpeg" alt="Descrizione della foto" loading="lazy" decoding="async">
                         </div>
                         <div class="piatto-corpo">
-                            <div class="occhiello">categoria piatto</div>
-                            <h3>Nome Piatto</h3>
-                            <p>descrizione piatto.</p>
+                            <div class="occhiello">Categoria piatto</div>
+                            <h3>Nome piatto</h3>
+                            <p>Descrizione del piatto.</p>
                         </div>
                     </article>
-                </div>
+                    -->
                 </div>
             </div>
         </section>
@@ -2433,12 +2616,18 @@
                             <div class="citta">84095 · Giffoni Valle Piana (SA) · Italia</div>
                         </div>
 
-                        <a class="btn btn-pieno" href="https://maps.google.com/maps?saddr=&daddr=Via%20De%27%20Rossi%205,%2084095,%20Giffoni%20Valle%20Piana%20Italia@40.7169,14.9423" target="_blank" rel="noopener">Apri in Google Maps</a>
+                        <a class="btn btn-pieno" href="https://www.google.com/maps/dir/?api=1&destination=La+Taverna+di+Baffone%2C+Via+De%27+Rossi+5%2C+84095+Giffoni+Valle+Piana+SA" target="_blank" rel="noopener">Apri in Google Maps</a>
                     </div>
 
-                    <div class="mappa svela">
-                        <span class="onda"></span>
-                        <span class="puntina"></span>
+                    <div class="mappa svela" id="mappa">
+                        <div class="mappa-anteprima" id="mappaAnteprima">
+                            <span class="onda" aria-hidden="true"></span>
+                            <span class="puntina" aria-hidden="true"></span>
+                            <div class="mappa-invito">
+                                <p class="mappa-testo">La mappa è di Google e si carica solo se la aprite voi: finché non premete, il sito non manda a Google nessun vostro dato.</p>
+                                <button type="button" class="btn btn-pieno" id="mappaBottone">Mostra la mappa</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -2526,6 +2715,8 @@
 
                         <p class="form-nota">I campi contrassegnati con * sono obbligatori. La prenotazione verrà richiesta tramite WhatsApp.</p>
 
+                        <p class="form-avviso" id="prenotazioneAvviso" role="alert" hidden></p>
+
                         <button class="btn btn-whatsapp" type="submit">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                                 <path d="M20 11.5a8.2 8.2 0 0 1-12.1 7.2L3 20l1.3-4.7A8.2 8.2 0 1 1 20 11.5Z" />
@@ -2556,17 +2747,26 @@
                     <h2>La voce dei <em>nostri ospiti</em></h2>
                 </div>
 
+                <!-- ==========================================================
+                     DA AGGIORNARE OGNI TANTO (1-2 volte l'anno)
+                     Il voto e il numero di recensioni sono scritti a mano:
+                     nessun sito statico puo leggerli da Google da solo.
+                     Il numero e volutamente arrotondato per DIFETTO ("oltre 900"):
+                     le recensioni possono solo aumentare, quindi la frase resta
+                     vera anche se non la si tocca per anni. Quando superate le
+                     1.000 basta cambiare i due punti qui sotto in "oltre 1.000".
+                     ========================================================== -->
                 <div class="voto svela">
                     <div>
-                        <div class="voto-num">4.5</div>
+                        <div class="voto-num"><span aria-hidden="true">4,5</span><span class="solo-lettori">Valutazione media 4,5 su 5</span></div>
                     </div>
                     <div>
-                        <div class="stelle">★★★★☆</div>
+                        <div class="stelle" aria-hidden="true">★★★★☆</div>
                         <div class="voto-nota">su Google Maps</div>
                     </div>
                     <div class="voto-sep"></div>
                     <div>
-                        <div class="voto-num" style="font-size:2.2rem">942</div>
+                        <div class="voto-num voto-num-piccolo">oltre 900</div>
                         <div class="voto-nota">recensioni</div>
                     </div>
                 </div>
@@ -2614,7 +2814,7 @@
                 </div>
 
                 <div style="text-align:center">
-                    <a class="link-tutte svela" href="https://maps.google.com/maps?saddr=&daddr=Via%20De%27%20Rossi%205,%2084095,%20Giffoni%20Valle%20Piana%20Italia@40.7169,14.9423" target="_blank" rel="noopener">Leggi tutte le 942 recensioni su Google Maps →</a>
+                    <a class="link-tutte svela" href="https://www.google.com/maps/search/?api=1&query=La+Taverna+di+Baffone%2C+Via+De%27+Rossi+5%2C+84095+Giffoni+Valle+Piana+SA" target="_blank" rel="noopener">Leggi le recensioni su Google Maps →</a>
                 </div>
             </div>
         </section>
@@ -2623,177 +2823,455 @@
 
         <footer>
             <div class="wrap">
-                <div class="marchio">
-                    La Taverna Di Baffone
-                    <span>Giffoni Valle Piana</span>
+                <div class="footer-griglia">
+
+                    <div class="footer-blocco">
+                        <div class="marchio">
+                            La Taverna Di Baffone
+                            <span>Giffoni Valle Piana</span>
+                        </div>
+                        <p class="footer-riga">Cucina napoletana e campana. Pranzo · Cena · Aperto fino a tardi.</p>
+                    </div>
+
+                    <div class="footer-blocco">
+                        <div class="footer-titolo">Dove siamo</div>
+                        <a href="https://www.google.com/maps/search/?api=1&query=La+Taverna+di+Baffone%2C+Via+De%27+Rossi+5%2C+84095+Giffoni+Valle+Piana+SA" target="_blank" rel="noopener">Via De' Rossi, 5<br>84095 Giffoni Valle Piana (SA)</a>
+                    </div>
+
+                    <div class="footer-blocco">
+                        <div class="footer-titolo">Contatti</div>
+                        <a href="tel:+393922024303">+39 392 202 4303</a><br>
+                        <a href="mailto:INDIRIZZO@EMAIL.IT">INDIRIZZO@EMAIL.IT</a>
+                    </div>
+
+                    <div class="footer-blocco">
+                        <div class="footer-titolo">Informazioni</div>
+                        <a href="menu.html">Menù</a><br>
+                        <a href="privacy.html">Privacy e cookie</a>
+                    </div>
+
                 </div>
-                <div>
-                    <a href="https://maps.google.com/maps?saddr=&daddr=Via%20De%27%20Rossi%205,%2084095,%20Giffoni%20Valle%20Piana%20Italia@40.7169,14.9423" target="_blank" rel="noopener">Via De' Rossi, 5 — Giffoni Valle Piana</a>
+
+                <!-- ==========================================================
+                     DATI OBBLIGATORI PER LEGGE (D.Lgs. 70/2003, art. 7)
+                     Un sito di un'attivita commerciale deve riportare in modo
+                     chiaro e permanente: denominazione, sede, partita IVA e un
+                     recapito. SOSTITUIRE i segnaposto in MAIUSCOLO qui sotto
+                     con i dati reali prima di pubblicare il sito.
+                     ========================================================== -->
+                <div class="footer-legale">
+                    <p>
+                        <strong>RAGIONE SOCIALE S.R.L.</strong> — Via De' Rossi, 5 — 84095 Giffoni Valle Piana (SA)<br>
+                        P. IVA <strong>IT00000000000</strong> · REA SA-000000 · Tel. +39 392 202 4303
+                    </p>
+                    <p class="footer-copy">
+                        © <span id="annoCorrente">2026</span> La Taverna Di Baffone · Tutti i diritti riservati ·
+                        <a href="privacy.html">Privacy e cookie</a>
+                    </p>
                 </div>
-                <div class="footer-riga">Cucina italiana, mediterranea, napoletana e campana. Pranzo · Cena · Aperto fino a tardi.</div>
             </div>
         </footer>
 
+        <!-- ============ BARRA AZIONI (solo telefono) ============
+             Il sito viene usato soprattutto da telefono, spesso mentre si
+             e per strada: le tre cose che servono davvero in quel momento
+             (chiamare, prenotare, farsi portare li) restano sempre a portata
+             di pollice, in fondo allo schermo. Su computer non compare. -->
+        <nav class="barra-azioni" aria-label="Azioni rapide">
+            <a class="azione" href="tel:+393922024303">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M6.5 3h3l1.5 4-2 1.5a12 12 0 0 0 6.5 6.5l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A17 17 0 0 1 4.5 5.2 2 2 0 0 1 6.5 3Z" />
+                </svg>
+                Chiama
+            </a>
+
+            <a class="azione azione-primaria" href="#prenotazione">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="3.5" y="5" width="17" height="16" rx="2" />
+                    <path d="M3.5 10h17M8.5 3v4M15.5 3v4M9 15l2 2 4-4" />
+                </svg>
+                Prenota
+            </a>
+
+            <a class="azione" href="https://www.google.com/maps/dir/?api=1&destination=La+Taverna+di+Baffone%2C+Via+De%27+Rossi+5%2C+84095+Giffoni+Valle+Piana+SA" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M12 21s7-5.7 7-11a7 7 0 1 0-14 0c0 5.3 7 11 7 11Z" />
+                    <circle cx="12" cy="10" r="2.6" />
+                </svg>
+                Indicazioni
+            </a>
+        </nav>
+
         <script>
+        (function () {
+            'use strict';
 
+            /* ============================================================
+               ORARI DEL LOCALE — un'unica fonte di verità.
+               Il pannello "Aperto/Chiuso" e il controllo della prenotazione
+               leggono entrambi da qui, così non possono più andare in disaccordo.
+               turni: [apertura, chiusura] in minuti dalla mezzanotte.
+               ============================================================ */
+            var GIORNI = ['domenica', 'lunedì', 'martedì', 'mercoledì', 'giovedì', 'venerdì', 'sabato'];
 
-/* ---------- barra che si attacca in alto ---------- */
-(function(){
-                          var barra = document.getElementById('barra');
-                          function aggiorna(){
-                            if (window.scrollY > 40) barra.classList.add('attaccata');
-                            else barra.classList.remove('attaccata');
-                          }
-                          aggiorna();
-                          window.addEventListener('scroll', aggiorna, { passive:true });
-})();
+            function m(h, min) { return h * 60 + min; }
 
-/* ---------- menù mobile ---------- */
-(function(){
-                          var bottone = document.getElementById('hamburger');
-                          var voci = document.getElementById('voci');
-                          if (!bottone || !voci) return;
+            var ORARI = {
+                0: [[m(12, 30), m(15, 0)]],                        // domenica: solo pranzo
+                1: [[m(12, 30), m(15, 0)], [m(18, 0), m(24, 0)]],
+                2: [[m(12, 30), m(15, 0)], [m(18, 0), m(24, 0)]],
+                3: [],                                             // mercoledì: riposo
+                4: [[m(12, 30), m(15, 0)], [m(18, 0), m(24, 0)]],
+                5: [[m(12, 30), m(15, 0)], [m(18, 0), m(24, 0)]],
+                6: [[m(12, 30), m(15, 0)], [m(18, 0), m(24, 0)]]
+            };
 
-                          function chiudi(){
-                            voci.classList.remove('aperto');
-                            bottone.setAttribute('aria-expanded','false');
-                            bottone.setAttribute('aria-label','Apri il menù');
-                          }
+            function oraLeggibile(minuti) {
+                var h = Math.floor(minuti / 60);
+                var mm = minuti % 60;
+                return h + '.' + (mm < 10 ? '0' + mm : mm);
+            }
 
-                          bottone.addEventListener('click', function(){
-                            var aperto = voci.classList.toggle('aperto');
-                            bottone.setAttribute('aria-expanded', aperto ? 'true' : 'false');
-                            bottone.setAttribute('aria-label', aperto ? 'Chiudi il menù' : 'Apri il menù');
-                          });
+            /* La chiusura di mezzanotte vale 24.00 in minuti: scritta cosi
+               nel pannello diventerebbe "fino alle 0.00". */
+            function fineTurno(minuti) {
+                return minuti === m(24, 0) ? 'Serviamo fino a mezzanotte'
+                                           : 'Serviamo fino alle ' + oraLeggibile(minuti);
+            }
 
-                          voci.querySelectorAll('a').forEach(function(a){
-                            a.addEventListener('click', chiudi);
-                          });
+            /* Il primo giorno aperto a partire dal giorno indicato (escluso). */
+            function prossimoGiornoAperto(da) {
+                for (var i = 1; i <= 7; i++) {
+                    var g = (da + i) % 7;
+                    if (ORARI[g].length) return { giorno: g, distanza: i };
+                }
+                return null;
+            }
 
-                          document.addEventListener('keydown', function(e){
-                            if (e.key === 'Escape') chiudi();
-                          });
-})();
+            function quandoRiapriamo(g) {
+                var p = prossimoGiornoAperto(g);
+                if (!p) return 'Vi aspettiamo presto';
+                var apertura = oraLeggibile(ORARI[p.giorno][0][0]);
+                if (p.distanza === 1) return 'Torniamo domani alle ' + apertura;
+                return 'Torniamo ' + GIORNI[p.giorno] + ' alle ' + apertura;
+            }
 
-/* ---------- stato apertura in tempo reale ---------- */
-(function(){
-                          var RIPOSO = 3; // mercoledì
+            /* ============================================================
+               MAPPA A CARICAMENTO SU RICHIESTA
 
-                          function minuti(h,m){ return h*60 + m; }
+               L'iframe di Google Maps, se fosse gia nella pagina, invierebbe
+               a Google l'indirizzo IP e altri dati di ogni visitatore al solo
+               caricamento del sito: sarebbe un trasferimento verso terzi che
+               richiede il consenso preventivo, quindi un banner dei cookie.
+               Caricandolo solo al clic, il consenso e l'atto stesso di premere
+               il bottone e il sito resta senza banner.
+               ============================================================ */
+            (function () {
+                var bottone = document.getElementById('mappaBottone');
+                var anteprima = document.getElementById('mappaAnteprima');
+                var mappa = document.getElementById('mappa');
+                if (!bottone || !anteprima || !mappa) return;
 
-                          function calcola(){
-                            var ora = new Date();
-                            var g = ora.getDay();
-                            var adesso = minuti(ora.getHours(), ora.getMinutes());
+                var INDIRIZZO = "La Taverna di Baffone, Via De' Rossi 5, 84095 Giffoni Valle Piana SA";
 
-                            var pranzoDa = minuti(12,30), pranzoA = minuti(15,0);
-                            var cenaDa   = minuti(18,0),  cenaA   = minuti(24,0);
+                bottone.addEventListener('click', function () {
+                    var telaio = document.createElement('iframe');
+                    telaio.src = 'https://www.google.com/maps?q=' +
+                        encodeURIComponent(INDIRIZZO) + '&z=16&hl=it&output=embed';
+                    telaio.title = 'Mappa: dove si trova La Taverna Di Baffone';
+                    telaio.loading = 'lazy';
+                    telaio.referrerPolicy = 'no-referrer-when-downgrade';
+                    telaio.setAttribute('allowfullscreen', '');
+                    mappa.appendChild(telaio);
+                    anteprima.remove();
+                });
+            })();
 
-                            if (g === RIPOSO)
-                              return { aperto:false, testo:'Chiuso oggi', nota:'Torniamo domani a pranzo' };
+            /* ============================================================
+               ANNO CORRENTE NEL PIE DI PAGINA
+               Cosi la nota di copyright non invecchia da sola ogni gennaio.
+               ============================================================ */
+            (function () {
+                var anno = document.getElementById('annoCorrente');
+                if (anno) anno.textContent = new Date().getFullYear();
+            })();
 
-                            if (adesso >= pranzoDa && adesso < pranzoA)
-                              return { aperto:true, testo:'Aperto adesso', nota:'Servizio pranzo fino alle 15.00' };
+            /* ============================================================
+               BARRA CHE SI ATTACCA IN ALTO
+               ============================================================ */
+            (function () {
+                var barra = document.getElementById('barra');
+                if (!barra) return;
 
-                            if (g !== 0 && adesso >= cenaDa && adesso < cenaA)
-                              return { aperto:true, testo:'Aperto adesso', nota:'Servizio cena fino a mezzanotte' };
+                function aggiorna() {
+                    barra.classList.toggle('attaccata', window.scrollY > 40);
+                }
 
-                            if (adesso < pranzoDa)
-                              return { aperto:false, testo:'Chiuso adesso', nota:'Apriamo alle 12.30' };
+                aggiorna();
+                window.addEventListener('scroll', aggiorna, { passive: true });
+            })();
 
-                            if (g !== 0 && adesso < cenaDa)
-                              return { aperto:false, testo:'Chiuso adesso', nota:'Riapriamo alle 18.00' };
+            /* ============================================================
+               MENÙ MOBILE
+               ============================================================ */
+            (function () {
+                var bottone = document.getElementById('hamburger');
+                var voci = document.getElementById('voci');
+                var barra = document.getElementById('barra');
+                if (!bottone || !voci) return;
 
-                            return { aperto:false, testo:'Chiuso adesso', nota:'Vi aspettiamo domani a pranzo' };
-                          }
+                function imposta(aperto) {
+                    voci.classList.toggle('aperto', aperto);
+                    bottone.setAttribute('aria-expanded', aperto ? 'true' : 'false');
+                    bottone.setAttribute('aria-label', aperto ? 'Chiudi il menù' : 'Apri il menù');
+                    // blocca lo scorrimento della pagina dietro al pannello
+                    document.body.classList.toggle('menu-aperto', aperto);
+                }
 
-                          function mostra(){
-                            var s = calcola();
-                            document.getElementById('stato-testo').textContent = s.testo;
-                            document.getElementById('stato-nota').textContent = s.nota;
-                            var spia = document.getElementById('spia');
-                            if (s.aperto) spia.classList.remove('chiusa');
-                            else spia.classList.add('chiusa');
-                          }
+                function chiudi() {
+                    if (voci.classList.contains('aperto')) imposta(false);
+                }
 
-                          mostra();
-                          setInterval(mostra, 60000);
-})();
+                bottone.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    imposta(!voci.classList.contains('aperto'));
+                });
 
-/* ---------- evidenzia il giorno corrente negli orari ---------- */
-(function(){
-                          var oggi = new Date().getDay();
-                          var riga = document.querySelector('.giorno[data-giorno="' + oggi + '"]');
-                          if (riga) riga.classList.add('oggi');
-})();
+                voci.addEventListener('click', function (e) {
+                    if (e.target.closest('a')) chiudi();
+                });
 
-/* ---------- rivelazione allo scroll ---------- */
-(function(){
-                          var elementi = document.querySelectorAll('.svela, .svela-serie');
-                          if (!elementi.length) return;
+                // un tocco fuori dal pannello lo richiude
+                document.addEventListener('click', function (e) {
+                    if (!voci.contains(e.target) && !(barra && barra.contains(e.target))) chiudi();
+                });
 
-                          var motoRidotto = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                document.addEventListener('keydown', function (e) {
+                    if (e.key === 'Escape' && voci.classList.contains('aperto')) {
+                        chiudi();
+                        bottone.focus();
+                    }
+                });
 
-                          if (motoRidotto || !('IntersectionObserver' in window)) {
-                            elementi.forEach(function(el){ el.classList.add('vista'); });
-                            return;
-                          }
+                // se si torna al desktop con il pannello aperto, si riallinea
+                window.addEventListener('resize', function () {
+                    if (window.innerWidth > 820) chiudi();
+                });
+            })();
 
-                          var osservatore = new IntersectionObserver(function(voci){
-                            voci.forEach(function(v){
-                              if (v.isIntersecting) {
-                                v.target.classList.add('vista');
-                                osservatore.unobserve(v.target);
-                              }
-                            });
-                          }, { threshold:0.1, rootMargin:'0px 0px -70px 0px' });
+            /* ============================================================
+               STATO APERTURA IN TEMPO REALE
+               ============================================================ */
+            (function () {
+                var elTesto = document.getElementById('stato-testo');
+                var elNota = document.getElementById('stato-nota');
+                var spia = document.getElementById('spia');
+                if (!elTesto || !elNota || !spia) return;
 
-                          elementi.forEach(function(el){ osservatore.observe(el); });
-})();
+                function calcola() {
+                    var ora = new Date();
+                    var g = ora.getDay();
+                    var adesso = m(ora.getHours(), ora.getMinutes());
+                    var turni = ORARI[g];
 
+                    if (!turni.length)
+                        return { aperto: false, testo: 'Chiuso oggi', nota: quandoRiapriamo(g) };
 
-/* ---------- prenotazione tavolo via WhatsApp ---------- */
-(function(){
-                          const numeroWhatsApp = "3922024303";
-                          const form = document.getElementById('formPrenotazione');
-                          const campoData = document.getElementById('dataPrenotazione');
-                          if (!form || !campoData) return;
+                    for (var i = 0; i < turni.length; i++) {
+                        if (adesso >= turni[i][0] && adesso < turni[i][1]) {
+                            return {
+                                aperto: true,
+                                testo: 'Aperto adesso',
+                                nota: fineTurno(turni[i][1])
+                            };
+                        }
+                        if (adesso < turni[i][0]) {
+                            return {
+                                aperto: false,
+                                testo: 'Chiuso adesso',
+                                nota: (i === 0 ? 'Apriamo alle ' : 'Riapriamo alle ') + oraLeggibile(turni[i][0])
+                            };
+                        }
+                    }
 
-                          function dataMinimaOggi(){
-                            const oggi = new Date();
-                            const anno = oggi.getFullYear();
-                            const mese = String(oggi.getMonth() + 1).padStart(2, '0');
-                            const giorno = String(oggi.getDate()).padStart(2, '0');
-                            return anno + '-' + mese + '-' + giorno;
-                          }
+                    // dopo l'ultimo turno della giornata
+                    return { aperto: false, testo: 'Chiuso adesso', nota: quandoRiapriamo(g) };
+                }
 
-                          function formattaData(dataISO){
-                            const parti = dataISO.split('-');
-                            return parti.length === 3 ? parti[2] + '/' + parti[1] + '/' + parti[0] : dataISO;
-                          }
+                function mostra() {
+                    var s = calcola();
+                    elTesto.textContent = s.testo;
+                    elNota.textContent = s.nota;
+                    spia.classList.toggle('chiusa', !s.aperto);
+                }
 
-                          campoData.min = dataMinimaOggi();
+                mostra();
+                setInterval(mostra, 60000);
+            })();
 
-                          form.addEventListener('submit', function(e){
-                            e.preventDefault();
+            /* ============================================================
+               EVIDENZIA IL GIORNO CORRENTE NEGLI ORARI
+               ============================================================ */
+            (function () {
+                var riga = document.querySelector('.giorno[data-giorno="' + new Date().getDay() + '"]');
+                if (riga) riga.classList.add('oggi');
+            })();
 
-                            if (!form.checkValidity()) {
-                              form.reportValidity();
-                              return;
-                            }
+            /* ============================================================
+               RIVELAZIONE ALLO SCROLL
+               ============================================================ */
+            (function () {
+                var elementi = document.querySelectorAll('.svela, .svela-serie');
+                if (!elementi.length) return;
 
-                            const nome = document.getElementById('nomePrenotazione').value.trim();
-                            const numero = document.getElementById('personePrenotazione').value;
-                            const data = formattaData(campoData.value);
-                            const ora = document.getElementById('oraPrenotazione').value;
-                            const note = document.getElementById('notePrenotazione').value.trim();
+                var motoRidotto = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-                            const messaggio = 'Salve, vorrei prenotare un tavolo per ' + numero + ' persone il ' + data + ' alle ' + ora + '. Nome: ' + nome + '. Note: ' + note;
-                            const urlWhatsApp = 'https://wa.me/' + numeroWhatsApp + '?text=' + encodeURIComponent(messaggio);
+                if (motoRidotto || !('IntersectionObserver' in window)) {
+                    elementi.forEach(function (el) { el.classList.add('vista'); });
+                    return;
+                }
 
-                            window.open(urlWhatsApp, '_blank', 'noopener,noreferrer');
-                          });
-})();
+                var osservatore = new IntersectionObserver(function (voci) {
+                    voci.forEach(function (v) {
+                        if (v.isIntersecting) {
+                            v.target.classList.add('vista');
+                            osservatore.unobserve(v.target);
+                        }
+                    });
+                }, { threshold: 0.1, rootMargin: '0px 0px -70px 0px' });
+
+                elementi.forEach(function (el) { osservatore.observe(el); });
+            })();
+
+            /* ============================================================
+               PRENOTAZIONE TAVOLO VIA WHATSAPP
+               ============================================================ */
+            (function () {
+                // Numero in formato internazionale, senza "+" e senza spazi:
+                // 39 = prefisso Italia, poi il numero del locale.
+                var NUMERO_WHATSAPP = '393922024303';
+
+                var form = document.getElementById('formPrenotazione');
+                var campoData = document.getElementById('dataPrenotazione');
+                var campoOra = document.getElementById('oraPrenotazione');
+                var campoNome = document.getElementById('nomePrenotazione');
+                var campoPersone = document.getElementById('personePrenotazione');
+                var campoNote = document.getElementById('notePrenotazione');
+                var avviso = document.getElementById('prenotazioneAvviso');
+                if (!form || !campoData || !campoOra || !campoNome || !campoPersone) return;
+
+                function iso(d) {
+                    return d.getFullYear() + '-' +
+                        String(d.getMonth() + 1).padStart(2, '0') + '-' +
+                        String(d.getDate()).padStart(2, '0');
+                }
+
+                function formattaData(dataISO) {
+                    var p = dataISO.split('-');
+                    return p.length === 3 ? p[2] + '/' + p[1] + '/' + p[0] : dataISO;
+                }
+
+                // Data locale, non UTC: "2026-09-10" passato a new Date() viene letto
+                // come UTC e in Italia diventerebbe il giorno prima.
+                function dataLocale(dataISO) {
+                    var p = dataISO.split('-');
+                    return new Date(+p[0], +p[1] - 1, +p[2]);
+                }
+
+                function aggiornaMinimo() {
+                    campoData.min = iso(new Date());
+                }
+
+                function messaggioAvviso(testo) {
+                    if (!avviso) return;
+                    avviso.textContent = testo || '';
+                    avviso.hidden = !testo;
+                }
+
+                function maiuscola(s) {
+                    return s.charAt(0).toUpperCase() + s.slice(1);
+                }
+
+                /* Controlla che giorno e ora scelti rientrino davvero negli orari. */
+                function verificaGiornoEOra() {
+                    var scelta = dataLocale(campoData.value);
+                    var oggi = new Date();
+                    oggi.setHours(0, 0, 0, 0);
+
+                    if (scelta < oggi) return 'La data scelta è già passata.';
+
+                    var turni = ORARI[scelta.getDay()];
+                    if (!turni.length)
+                        return maiuscola(GIORNI[scelta.getDay()]) +
+                            ' è il nostro giorno di riposo: scegliete un altro giorno.';
+
+                    var parti = campoOra.value.split(':');
+                    var minutiScelti = m(+parti[0], +parti[1]);
+
+                    var dentro = turni.some(function (t) {
+                        return minutiScelti >= t[0] && minutiScelti < t[1];
+                    });
+                    if (!dentro) {
+                        return 'Quel giorno serviamo ' + turni.map(function (t) {
+                            return oraLeggibile(t[0]) + '–' + oraLeggibile(t[1]);
+                        }).join(' e ') + '.';
+                    }
+
+                    // stesso giorno: l'orario non può essere già passato
+                    var adesso = new Date();
+                    if (scelta.getTime() === oggi.getTime() &&
+                        minutiScelti <= m(adesso.getHours(), adesso.getMinutes())) {
+                        return 'Quell’ora è già passata: scegliete un orario più avanti.';
+                    }
+
+                    return null;
+                }
+
+                aggiornaMinimo();
+                // se la pagina resta aperta oltre la mezzanotte, il minimo va rinfrescato
+                campoData.addEventListener('focus', aggiornaMinimo);
+                [campoData, campoOra].forEach(function (c) {
+                    c.addEventListener('change', function () { messaggioAvviso(''); });
+                });
+
+                form.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    aggiornaMinimo();
+
+                    if (!form.checkValidity()) {
+                        form.reportValidity();
+                        return;
+                    }
+
+                    var problema = verificaGiornoEOra();
+                    if (problema) {
+                        messaggioAvviso(problema);
+                        campoData.focus();
+                        return;
+                    }
+                    messaggioAvviso('');
+
+                    var nome = campoNome.value.trim();
+                    var persone = parseInt(campoPersone.value, 10);
+                    var data = formattaData(campoData.value);
+                    var ora = campoOra.value;
+                    var note = campoNote ? campoNote.value.trim() : '';
+
+                    var messaggio = 'Salve, vorrei prenotare un tavolo per ' +
+                        persone + (persone === 1 ? ' persona' : ' persone') +
+                        ' il ' + data + ' alle ' + ora + '.' +
+                        ' Nome: ' + nome + '.';
+                    if (note) messaggio += ' Note: ' + note;
+
+                    var url = 'https://wa.me/' + NUMERO_WHATSAPP + '?text=' + encodeURIComponent(messaggio);
+
+                    // su alcuni telefoni window.open viene bloccato: in quel caso
+                    // si apre WhatsApp nella stessa scheda invece di non fare nulla.
+                    var scheda = window.open(url, '_blank', 'noopener,noreferrer');
+                    if (!scheda) window.location.href = url;
+                });
+            })();
+        })();
         </script>
 
     </body>
